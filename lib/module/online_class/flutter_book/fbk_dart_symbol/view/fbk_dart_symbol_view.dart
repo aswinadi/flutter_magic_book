@@ -304,27 +304,25 @@ class FbkDartSymbolView extends StatefulWidget {
   bool? exercise21() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan titik koma
-    
-  Map<String, dynamic> user = {"name": "John", "age": 20};
-  print("Nama: user["name"], Umur: user["age"]");
- 
+
+    Map<String, dynamic> user = {"name": "John", "age": 20};
+    print("Nama: user['name'], Umur: user['age']");
+
     return user.length == 2;
   }
 
   bool? exercise22() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan symbol dart
-    
-  List numbers = [1, 2, 3, 4, 5];
-  for (int number in numbers){
-    if (number % 2 == 0)
-    {
-      print("Bilangan genap: $number");
-    } else {
-      print("Bilangan ganjil: $number");
+
+    List numbers = [1, 2, 3, 4, 5];
+    for (int number in numbers) {
+      if (number % 2 == 0) {
+        print("Bilangan genap: $number");
+      } else {
+        print("Bilangan ganjil: $number");
+      }
     }
-      
-  }
     return numbers.length == 5;
   }
 
