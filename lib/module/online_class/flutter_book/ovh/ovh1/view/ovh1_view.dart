@@ -17,27 +17,30 @@ class Ovh1View extends StatefulWidget {
         title: const Text("Ovh1"),
         actions: const [],
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 100,
-            decoration: const BoxDecoration(
-              color: Colors.blue,
+      body: SingleChildScrollView(
+        controller: ScrollController(),
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              decoration: const BoxDecoration(
+                color: Colors.blue,
+              ),
             ),
-          ),
-          Container(
-            height: 100,
-            decoration: const BoxDecoration(
-              color: Colors.red,
+            Container(
+              height: 100,
+              decoration: const BoxDecoration(
+                color: Colors.red,
+              ),
             ),
-          ),
-          Container(
-            height: 1000,
-            decoration: const BoxDecoration(
-              color: Colors.purple,
+            Container(
+              height: 1000,
+              decoration: const BoxDecoration(
+                color: Colors.purple,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

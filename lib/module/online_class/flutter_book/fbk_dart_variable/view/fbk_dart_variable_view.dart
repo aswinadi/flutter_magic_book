@@ -6,7 +6,7 @@ class FbkDartVariableView extends StatefulWidget {
 
   bool? exercise1() {
     //Ubah tipe data variable dibawah ini menjadi String
-    int price = 100;
+    String price = "100";
     return price is String;
   }
 
@@ -16,6 +16,7 @@ class FbkDartVariableView extends StatefulWidget {
     //Ubahlah variable text di atas menjadi double,
     //dan isilah varibel price dengan hasil konversinya
     //di bagian bawah
+    price = text.toDouble();
     return price == 100.24;
   }
 
@@ -26,10 +27,8 @@ class FbkDartVariableView extends StatefulWidget {
     //[TIPS] Hilangkan semua String selain angka 0-9 dan titik.
     //Gunakan Regex seperti ini: .replaceAll(RegExp(r'[^\d.]'), '')
 
-    /*
     String text = "300.24a";
-    price = double.parse(text);
-    */
+    price = double.parse(text.replaceAll(RegExp(r'[^\d.]'), ''));
 
     return price == 300.24;
   }
@@ -38,6 +37,12 @@ class FbkDartVariableView extends StatefulWidget {
     int input = 12;
     // Tuliskan kode untuk memverifikasi apakah input adalah bilangan ganjil
     bool? output;
+
+    if (input % 2 == 0) {
+      output == false;
+    } else {
+      output == true;
+    }
 
     return output == true;
   }
@@ -49,10 +54,10 @@ class FbkDartVariableView extends StatefulWidget {
     //Kode dibawah akan error jika di jalankan,
     //Perbaiki dengan meng-gunakan .tryParse("300aa")??0
     //Sehingga ketika parameter-nya tidak valid, nilainya menjadi 0
-    /*
-    total = double.parse("300aa");
-    */
-    return total != null;
+
+    total = double.tryParse("300aa") ?? 0;
+
+    return total is double;
   }
 
   bool? exercise6() {
@@ -63,11 +68,9 @@ class FbkDartVariableView extends StatefulWidget {
     //Perbaiki dengan meng-gunakan .tryParse("39ads")??0
     //Sehingga ketika parameter-nya tidak valid, nilainya menjadi 0
 
-    /*
-    age = int.parse("39ads");
-    */
+    age = int.tryParse("39ads") ?? 0;
 
-    return age != null;
+    return age is int;
   }
 
   bool? exercise7() {
